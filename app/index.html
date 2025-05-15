@@ -2,22 +2,13 @@
 <head>
   ...
   <script src="lib/angular/angular.js"></script>
-  <script src="app.js"></script>
+  <script src="app.module.js"></script>
+  <script src="phone-list/phone-list.module.js"></script>
+  <script src="phone-list/phone-list.component.js"></script>
 </head>
-<body ng-controller="PhoneListController">
-  <p>Step 3</p>
-  <h1>Hello, {{name}}!</h1>
-  <h2>You have {{phones.length}} itens on your list.</h2>
-  <ul>
-    <li ng-repeat="phone in phones">
-      <span>{{phone.name}}</span>
-      <p>{{phone.snippet}}</p> 
-    </li>
-  </ul>
-  <table>
-    <tr><th>Row number</th></tr>
-    <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
-  </table>
+<body>
 
+  <!-- Use a custom component to render a list of phones -->
+  <phone-list></phone-list>  <!-- This tells AngularJS to instantiate a `phoneList` component here. -->
 </body>
 </html>
