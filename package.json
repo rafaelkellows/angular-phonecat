@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "description": "A tutorial application for AngularJS",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rafaelkellows/angular-phonecat.git"
-  },
+  "repository": "https://github.com/angular/angular-phonecat",
   "license": "MIT",
   "dependencies": {
     "angular": "1.8.x",
-    "bootstrap": "3.3.x"
+    "angular-animate": "1.8.x",
+    "angular-resource": "1.8.x",
+    "angular-route": "1.8.x",
+    "bootstrap": "3.3.x",
+    "jquery": "3.3.x"
   },
   "devDependencies": {
     "angular-mocks": "1.8.x",
@@ -27,7 +28,7 @@
     "postinstall": "npm run copy-libs",
     "update-deps": "npm update",
     "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist}/**/*\" app/lib -C",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
     "prestart": "npm install",
     "start": "http-server ./app -a localhost -p 8000 -c-1",
     "pretest": "npm install",
@@ -37,12 +38,5 @@
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor e2e-tests/protractor.conf.js"
-  },
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/rafaelkellows/angular-phonecat/issues"
-  },
-  "homepage": "https://github.com/rafaelkellows/angular-phonecat#readme"
+  }
 }

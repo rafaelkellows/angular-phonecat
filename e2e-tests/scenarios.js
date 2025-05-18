@@ -6,18 +6,31 @@ describe('PhoneCat Application', function() {
       browser.get('index.html');
     });
 
-    it('should filter the phone list as a user types into the search box', function() {
-      var phoneList = element.all(by.repeater('phone in $ctrl.phones'));
-      var query = element(by.model('$ctrl.query'));
+    it('should be possible to control phone order via the drop-down menu', function() {
+      var queryField = element(by.model('$ctrl.query'));
+      var orderSelect = element(by.model('$ctrl.orderProp'));
+      var nameOption = orderSelect.element(by.css('option[value="name"]'));
+      var phoneNameColumn = element.all(by.repeater('phone in $ctrl.phones').column('phone.name'));
 
-      expect(phoneList.count()).toBe(3);
+      function getNames() {
+        return phoneNameColumn.map(function(elem) {
+          return elem.getText();
+        });
+      }
 
-      query.sendKeys('Abracadabra');
-      expect(phoneList.count()).toBe(1);
+      queryField.sendKeys('tablet');   // Let's narrow the dataset to make the assertions shorter
 
-      query.clear();
-      query.sendKeys('Motorola');
-      expect(phoneList.count()).toBe(2);
+      expect(getNames()).toEqual([
+        'Realme Note 60',
+        'Motorola Moto G05'
+      ]);
+
+      nameOption.click();
+
+      expect(getNames()).toEqual([
+        'Motorola Moto G05',
+        'Realme Note 60'
+      ]);
     });
 
   });

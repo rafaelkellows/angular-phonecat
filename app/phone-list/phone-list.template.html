@@ -3,14 +3,27 @@
     <div class="col-md-2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="$ctrl.query" />
+      <p>
+        Search:
+        <input ng-model="$ctrl.query">
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="">Select One</option>
+          <option value="name">Alphabetical</option>
+          <option value="price">Price</option>
+          <option value="age">Age (Newest)</option>
+        </select>
+      </p>
 
     </div>
     <div class="col-md-10">
       <!--Body content-->
 
       <ul class="phones">
-        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
+         <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
           <h3>{{phone.name}}</h3>
           <img src={{phone.imagePath}} alt="{{phone.name}}" width="200">
           <h4>{{phone.price}}</h4>
@@ -20,3 +33,4 @@
 
     </div>
   </div>
+</div>
