@@ -1,5 +1,5 @@
 // Define the `phonecatApp` module
-angular.module('phonecatApp', [
+angular.module('saapv', [
   // ...which depends on the `phoneList` module
-  'orderList'
+  'productList'
 ]);

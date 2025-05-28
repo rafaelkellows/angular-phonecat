@@ -1,0 +1,41 @@
+<div class="container-fluid product-list">
+  <div class="row">
+    <div class="col-md-2 filters">
+      <!--Sidebar content-->
+
+      <p>
+        Procure:
+        <input ng-model="$ctrl.query">
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="">Select One</option>
+          <option value="title">title</option>
+          <option value="price">Price</option>
+          <option value="id">ID</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10 list-itens">
+      <!--Body content-->
+
+      <ul class="orders">
+         <li ng-repeat="order in $ctrl.orders | filter:$ctrl.query | orderBy:$ctrl.orderProp | orderBy:$ctrl.outroCaminho">
+          <h3><a href="#!/order/{{order.id}}">{{order.title}}</a></h3>
+          <a href="#!/order/{{order.id}}" class="thumb">
+          <img ng-src="{{order.imageUrl}}" alt="{{order.title}}" width="200" />
+        </a>
+        <div ng-switch="order.fixedPrice">
+          <h4 ng-switch-when="true">{{ order.price | currency : 'R$' : 2 }}</h4>
+          <h4 ng-switch-default>à partir de {{ order.price | currency : 'R$' : 2 }}</h4>
+        </div>
+          <p>{{order.description}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
