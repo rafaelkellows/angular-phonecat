@@ -3,15 +3,24 @@
 <div class="phone-detail">
   <img ng-src="{{$ctrl.phone.images[0]}}" class="phone" />
   <div>
-    <h3>{{$ctrl.phone.name}}</h3>
+    <h3>{{$ctrl.phone.name | uppercase}}</h3>
+
+    <dl>
+      <dt>Infrared</dt>
+      <dd>{{$ctrl.phone.connectivity.infrared | checkmark}}</dd>
+      <dt>GPS</dt>
+      <dd>{{$ctrl.phone.connectivity.gps | checkmark}}</dd>
+    </dl>
 
     <p>{{$ctrl.phone.description}}</p>
 
     <ul class="phone-thumbs">
       <li ng-repeat="img in $ctrl.phone.images">
-        <img ng-src="{{img}}" />
+        <img ng-src="{{img}}" width="200" />
       </li>
     </ul>
+
+    
 
     <ul class="specs">
       <li>
