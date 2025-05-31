@@ -1,7 +1,8 @@
 <h2>Detalhes do Telefone</h2>
 
 <div class="phone-detail">
-  <img ng-src="{{$ctrl.phone.images[0]}}" class="phone" />
+  <img ng-src="{{$ctrl.mainImageUrl}}" class="phone" />
+
   <div>
     <h3>{{$ctrl.phone.name | uppercase}}</h3>
 
@@ -14,13 +15,15 @@
 
     <p>{{$ctrl.phone.description}}</p>
 
+    <h4>Fotos do Produto</h4>
     <ul class="phone-thumbs">
       <li ng-repeat="img in $ctrl.phone.images">
-        <img ng-src="{{img}}" width="200" />
+        <img ng-src="{{img}}" ng-dblclick="$ctrl.onDblclick(img)" ng-click="$ctrl.setImage(img)"  ng-mouseover="$ctrl.onFocus(img)" />
       </li>
     </ul>
 
     
+    <h4>Especificações</h4>
 
     <ul class="specs">
       <li>

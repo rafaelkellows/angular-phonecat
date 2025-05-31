@@ -6,8 +6,22 @@ angular.
       function PhoneDetailController($http, $routeParams) {
         var self = this;
 
+        self.setImage = function setImage(imageUrl) {
+          self.mainImageUrl = imageUrl;
+          //console.log('You focus image: ' + imageUrl);
+        };
+
+        self.onFocus = function onFocus(imageUrl) {
+          console.log('You focus image: ' + imageUrl);
+        };
+
+        self.onDblclick = function onDblclick(imageUrl) {
+          alert('You double-clicked image: ' + imageUrl);
+        };
+
         $http.get('phones/' + $routeParams.phoneId + '.json').then(function(response) {
           self.phone = response.data;
+          self.setImage(self.phone.images[0]);
         });
       }
     ]
