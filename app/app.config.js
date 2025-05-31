@@ -3,6 +3,9 @@ angular.
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
+        when('/home', {
+          template: '<home-page></home-page>'
+        }).
         when('/products', {
           template: '<product-list></product-list>'
         }).
@@ -12,6 +15,6 @@ angular.
         when('/phones/:phoneId', {
           template: '{{$ctrl.phoneId}} <phone-detail></phone-detail>'
         }).
-        otherwise('/phones');
+        otherwise('/home');
     }
   ]);

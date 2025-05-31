@@ -1,2 +1,1 @@
-// Define the `phoneList` module
-angular.module('productList', []);
+angular.module('productList', ['core.product']);
