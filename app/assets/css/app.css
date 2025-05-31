@@ -1,0 +1,63 @@
+body{
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-style: normal;
+    }
+    h1, h2, h3, h4, h5, h6{ margin: 0; padding: 0;}
+    main{
+      width: 1140px;
+      margin: 0 auto;
+      
+      nav{ 
+        display: flex; justify-content: space-evenly; border: 1px solid #ccc; padding: 15px 0;
+        a{
+          font-size: 16px; font-weight: 800; color: #2d0c7a; text-decoration: none;
+        }
+        a:hover{
+          color: #ff6600;
+        }
+      }
+      .page-viewer{
+        background-color: #e8e9e9; padding:15px 50px;
+      }
+    }
+    
+    
+    .product-list .filters{
+      display: flex;
+    }
+    .product-list .list-itens{
+      display: flex;
+    }
+    /* Home Page */
+    main .home-page{
+      ul{
+        display: flex; justify-content: space-between;
+        li{ 
+          border-radius: 50%; border:1px solid #ff6600; background-color: #ff6600;
+          list-style: none; list-style-type: none; transition: all .8s;
+          a{ 
+            color: #fff; width: 130px; height: 130px; line-height: 130px; display: block; text-decoration: none; padding: 20px; text-align: center;
+            font-size: 14px; font-weight: 400;
+          }
+        }
+        li:hover{ border:1px solid #306320; background-color: #306320; }
+      }
+    }
+    /* Phone Detail */
+    main .phone-detail{
+      display: flex; justify-content: space-evenly; margin-top: 20px;
+      > img{
+        display: inline-block; width: 250px; height: fit-content;
+      }
+      > div{
+        padding: 0 20px;
+      }
+      .phone-thumbs{
+        display: flex; justify-content: space-between;
+        li{
+          list-style: none; list-style-type: none;
+          img{ width: 60px; height: fit-content;}
+        }
+      }
+    }
