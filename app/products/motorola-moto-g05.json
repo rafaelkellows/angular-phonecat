@@ -1,0 +1,60 @@
+{
+    "additionalFeatures": "Adobe Flash Player 10, Quadband GSM Worldphone, Advance Business Security, Complex Password Secure, Review & Edit Documents with Quick Office, Personal 3G Mobile Hotspot for up to 5 WiFi enabled Devices, Advanced Social Networking brings all social content into a single homescreen widget", 
+    "android": {
+        "os": "Android 2.2", 
+        "ui": ""
+    }, 
+    "availability": [
+        "Verizon"
+    ], 
+    "battery": {
+        "standbyTime": "330 hours", 
+        "talkTime": "7 hours", 
+        "type": "Lithium Ion (Li-Ion) (1400 mAH)"
+    }, 
+    "camera": {
+        "features": [
+            "Flash", 
+            "Video"
+        ], 
+        "primary": "5.0 megapixels"
+    }, 
+    "connectivity": {
+        "bluetooth": "Bluetooth 2.1", 
+        "cell": "800/1900 CDMA EVDO Rev. A with dual diversity antenna, 850/900/1800/1900MHz GSM, GPRS Class 12, EDGE Class 12, 850/1900/2100 WCDMA (category 9/10), HSDPA 10.2mbps, HSUPA 1.8 mbps", 
+        "gps": true, 
+        "infrared": false, 
+        "wifi": "802.11 b/g/n"
+    }, 
+    "description": "Com o Smartphone Motorola Moto G05 128GB 12GB RamBoost Câmera 50MP AI Bateria de 5200 mAh Tela 6.7 - Violeta, aproveite a tela de 6,7, com o maior brilho da categoria no mundo até 1000 nits, oferecendo clareza até sob a luz direta do sol. O desempenho é potente com até 12GB de RAM Boost inteligente, garantindo uma experiência multitarefa rápida sem travar. A câmera de 50MP com inteligência artificial e night vision automático captura fotos nítidas e retratos vibrantes, mesmo à noite. Com a superbateria de 5200 mah, você tem até 40 horas de uso4. O design sofisticado em vegan leather, a proteção contra respingos d'água e o vidro corning gorilla glass 3 garantem resistência e estilo. Moto G05. Maior. Mais potente. Mais brilhante.", 
+    "display": {
+        "screenResolution": "HVGA (480 x 320)", 
+        "screenSize": "3.1 inches", 
+        "touchScreen": true
+    }, 
+    "hardware": {
+        "accelerometer": true, 
+        "audioJack": "3.5mm", 
+        "cpu": "1 GHz TI OMAP", 
+        "fmRadio": false, 
+        "physicalKeyboard": true, 
+        "usb": "USB 2.0"
+    }, 
+    "id": "droid-pro-by-motorola", 
+    "images": [
+        "img/phones/motorola-moto-g05-ilustra1.jpg"
+    ], 
+    "name": "Motorola Moto G05 128GB 12GB RamBoost Câmera 50MP AI Bateria de 5200 mAh Tela 6.7 - Violeta", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "61.0 mm (w)", 
+            "119.0 mm (h)", 
+            "11.7 mm (d)"
+        ], 
+        "weight": "134.0 grams"
+    }, 
+    "storage": {
+        "flash": "2048MB", 
+        "ram": "512MB"
+    }
+}

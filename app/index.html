@@ -12,12 +12,18 @@
 
   <script src="phone-list/phone-list.module.js"></script>
   <script src="phone-list/phone-list.component.js"></script>
-
-  <script src="product-list/product-list.module.js"></script>
-  <script src="product-list/product-list.component.js"></script>
   
   <script src="phone-detail/phone-detail.module.js"></script>
   <script src="phone-detail/phone-detail.component.js"></script>
+
+  <script src="product-list/product-list.module.js"></script>
+  <script src="product-list/product-list.component.js"></script>
+    
+  <script src="product-detail/product-detail.module.js"></script>
+  <script src="product-detail/product-detail.component.js"></script>
+
+  <!--script src="product-category-list/product-category-list.module.js"></script>
+  <script src="product-category-list/product-category-list.component.js"></script-->
 
   <script src="core/core.module.js"></script>
   <script src="core/checkmark/checkmark.filter.js"></script>
@@ -27,6 +33,9 @@
 
   <script src="core/product/product.module.js"></script>
   <script src="core/product/product.service.js"></script>
+
+  <!--script src="core/product-category/product-category.module.js"></script>
+  <script src="core/product-category/product-category.service.js"></script-->
   
   <link href="assets/css/roboto/stylesheet.css" rel="stylesheet">
   <link href="assets/css/app.css" rel="stylesheet">
@@ -38,11 +47,11 @@
     <nav>
       <a href="/#!/home">Inicial</a>
       <a href="/#!/products">Produtos</a>
-      <a href="/#!/orders">Pedidos</a>
       <a href="/#!/phones">Telefones</a>
-      <a href="/#!/users">Usuários</a>
+      <!--a href="/#!/orders">Pedidos</a>
+      <a href="/#!/users">Usuários</a-->
     </nav>
-    <div ng-view class="page-viewer"></div>
+    <div ng-view class="page-viewer">Carregando...</div>
   </main>
 </body>
 </html>

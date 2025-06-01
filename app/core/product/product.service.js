@@ -2,12 +2,14 @@ angular.
   module('core.product').
   factory('Product', ['$resource',
     function($resource) {
-      return $resource('product-list/:phoneId.json', {}, {
+      return $resource('products/:productID.json', {}, {
         query: {
           method: 'GET',
-          params: {phoneId: 'products'},
+          params: {productID: 'products'},
           isArray: true
         }
       });
     }
   ]);
+
+  
