@@ -4,7 +4,7 @@ angular.
     templateUrl: 'product-list/product-list.template.html',
     controller: ['Product',
       function ProductListController(Product) {
-        this.orders = Product.query();
+        this.products = Product.query();
         this.orderProp = 'title';
       }
     ]

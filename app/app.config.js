@@ -9,6 +9,9 @@ angular.
         when('/products', {
           template: '<product-list></product-list>'
         }).
+        when('/products/:phoneId', {
+          template: '<product-detail></product-detail>'
+        }).
         when('/phones', {
           template: '<phone-list></phone-list>'
         }).

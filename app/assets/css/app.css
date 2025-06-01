@@ -3,7 +3,8 @@ body{
       font-weight: 500;
       font-style: normal;
     }
-    h1, h2, h3, h4, h5, h6{ margin: 0; padding: 0;}
+    h1, h2, h3, h4, h5, h6, ul, li{ margin: 0; padding: 0;}
+    a{ display: block; }
     main{
       width: 1140px;
       margin: 0 auto;
@@ -18,17 +19,27 @@ body{
         }
       }
       .page-viewer{
-        background-color: #e8e9e9; padding:15px 50px;
+        background-color: #f9f9f9; padding:20px 50px;
       }
     }
     
-    
+    /* Product Lista */
     .product-list .filters{
       display: flex;
     }
     .product-list .list-itens{
-      display: flex;
+      
+      ul{
+        display: flex; flex-wrap: wrap; justify-content: space-between;
+        li{
+            width: 30%; padding: 15px; display: inline-block; vertical-align: top; background-color: #efe9e6; margin: 0 0 25px 0; transition: all .8s;
+            h3{ margin-bottom: 20px;}
+            > a.thumb{ margin-bottom: 20px; }
+        }
+        li:hover{ background-color: #b68c77;  }
+      }
     }
+
     /* Home Page */
     main .home-page{
       ul{
@@ -44,6 +55,7 @@ body{
         li:hover{ border:1px solid #306320; background-color: #306320; }
       }
     }
+
     /* Phone Detail */
     main .phone-detail{
       display: flex; justify-content: space-evenly; margin-top: 20px;

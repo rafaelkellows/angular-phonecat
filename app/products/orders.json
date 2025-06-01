@@ -1,0 +1,27 @@
+[
+    
+    {
+        "id": 1, 
+        "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+        "title": "Lanche Ultra Mega: Um Delírio de Sabores e Texturas", 
+        "description": "É mais do que um simples lanche — é uma entidade sensorial que transcende o cotidiano. O Lanche Ultra Mega não se contenta em ser mastigado; ele exige ser experienciado. Cada camada é uma provocação, um manifesto calórico que flerta com o excesso e sussurra ao paladar promessas de prazer imediato.",
+        "price" : 99.90,
+        "fixedPrice" : true
+    }, 
+    {
+        "id": 2, 
+        "imageUrl": "img/products/imagem_ilustra_order_2.jpg", 
+        "title": "Salgados e Doces Variados: Uma Dança de Contrastes e Desejos", 
+        "description": "Eles chegam em silêncio, espalhados sobre a mesa como uma constelação de vontades. Pequenos, delicados ou exageradamente cheios de si, os salgados e doces variados são mais do que alimentos — são fragmentos de festa, pedaços de memória, partículas de infância e prazer entrelaçados.",
+        "price" : 29.90,
+        "fixedPrice" : true
+    }, 
+    {
+        "id": 3, 
+        "imageUrl": "img/products/imagem_ilustra_order_3.jpg", 
+        "title": "Pratos Executivos: O Ritmo Saboroso dos Dias Úteis", 
+        "description": "De segunda a sexta, no compasso apressado das horas úteis, surge um intervalo sagrado — o instante em que o tempo desacelera e o paladar toma as rédeas. São os Pratos Executivos, não apenas refeições, mas arquiteturas momentâneas de equilíbrio entre urgência e prazer. Eles não gritam por atenção, mas se impõem com a elegância de quem sabe seu valor: simples, completos, perfeitamente orquestrados.",
+        "price" : 9.99,
+        "fixedPrice" : false
+    }
+]

@@ -1,4 +1,5 @@
 <div class="container-fluid product-list">
+  <h2>Lista de Produtos</h2>
   <div class="row">
     <div class="col-md-2 filters">
       <!--Sidebar content-->
@@ -22,17 +23,19 @@
     <div class="col-md-10 list-itens">
       <!--Body content-->
 
-      <ul class="orders">
-         <li ng-repeat="order in $ctrl.orders | filter:$ctrl.query | orderBy:$ctrl.orderProp | orderBy:$ctrl.outroCaminho">
-          <h3><a href="#!/order/{{order.id}}">{{order.title}}</a></h3>
-          <a href="#!/order/{{order.id}}" class="thumb">
-          <img ng-src="{{order.imageUrl}}" alt="{{order.title}}" width="200" />
-        </a>
-        <div ng-switch="order.fixedPrice">
-          <h4 ng-switch-when="true">{{ order.price | currency : 'R$' : 2 }}</h4>
-          <h4 ng-switch-default>à partir de {{ order.price | currency : 'R$' : 2 }}</h4>
-        </div>
-          <p>{{order.description}}</p>
+      <ul class="products">
+         <li ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <h3><a href="#!/products/{{product.label}}">{{product.title}}</a></h3>
+          <a href="#!/products/{{product.label}}" class="thumb">
+            <img ng-src="{{product.imageUrl}}" alt="{{product.title}}" width="200" />
+          </a>
+          <div ng-switch="product.fixedPrice">
+            <h4 ng-switch-when="true">{{ product.price | currency : 'R$' : 2 }}</h4>
+            <h4 ng-switch-default>à partir de {{ product.price | currency : 'R$' : 2 }}</h4>
+          </div>
+          <p>Categoria: {{product.label}}</p>
+          <p>{{product.description}}</p>
+          <a href="#!/products/{{product.label}}" class="thumb">Ver produtos</a>
         </li>
       </ul>
 
