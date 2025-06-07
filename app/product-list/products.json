@@ -7,7 +7,36 @@
         "title": "Lanche Ultra Mega: Um Delírio de Sabores e Texturas", 
         "description": "É mais do que um simples lanche — é uma entidade sensorial que transcende o cotidiano. O Lanche Ultra Mega não se contenta em ser mastigado; ele exige ser experienciado. Cada camada é uma provocação, um manifesto calórico que flerta com o excesso e sussurra ao paladar promessas de prazer imediato.",
         "price" : 99.90,
-        "fixedPrice" : true
+        "fixedPrice" : true,
+        "subproducts" : [
+            {
+                "id": 12, 
+                "label" : "lanche_ultra",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Lanche Ultra Mega: Um Delírio de Sabores e Texturas", 
+                "description": "É mais do que um simples lanche — é uma entidade sensorial que transcende o cotidiano. O Lanche Ultra Mega não se contenta em ser mastigado; ele exige ser experienciado. Cada camada é uma provocação, um manifesto calórico que flerta com o excesso e sussurra ao paladar promessas de prazer imediato.",
+                "price" : 99.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 123, 
+                "label" : "lanche_ultra",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Lanche Ultra Mega: Um Delírio de Sabores e Texturas", 
+                "description": "É mais do que um simples lanche — é uma entidade sensorial que transcende o cotidiano. O Lanche Ultra Mega não se contenta em ser mastigado; ele exige ser experienciado. Cada camada é uma provocação, um manifesto calórico que flerta com o excesso e sussurra ao paladar promessas de prazer imediato.",
+                "price" : 99.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 142, 
+                "label" : "lanche_ultra",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Lanche Ultra Mega: Um Delírio de Sabores e Texturas", 
+                "description": "É mais do que um simples lanche — é uma entidade sensorial que transcende o cotidiano. O Lanche Ultra Mega não se contenta em ser mastigado; ele exige ser experienciado. Cada camada é uma provocação, um manifesto calórico que flerta com o excesso e sussurra ao paladar promessas de prazer imediato.",
+                "price" : 99.90,
+                "fixedPrice" : true
+            }
+        ]
     }, 
     {
         "id": 2, 

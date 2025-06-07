@@ -2,10 +2,10 @@ angular.
   module('productDetail').
   component('productDetail', {
     templateUrl: 'product-detail/product-detail.template.html',
-    controller: ['$routeParams', 'Phone',
-      function PhoneDetailController($routeParams, Product) {
+    controller: ['$routeParams', 'Product',
+      function ProductDetailController($routeParams, Product) {
         var self = this;
-        self.product = Product.get({phoneId: $routeParams.phoneId}, function(product) {
+        self.product = Product.get({productID: $routeParams.productID}, function(product) {
           self.setImage(product.images[0]);
         });
 

@@ -1,5 +1,7 @@
 <html ng-app="phonecatApp">
 <head>
+  <meta charset="utf-8">
+  <title>SAAPV - Sistema Auto Atendimento para Pequenas Vendas | v.1.0</title>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="lib/angular-resource/angular-resource.js"></script>
@@ -22,6 +24,9 @@
   <script src="product-detail/product-detail.module.js"></script>
   <script src="product-detail/product-detail.component.js"></script>
 
+  <script src="order-list/order-list.module.js"></script>
+  <script src="order-list/order-list.component.js"></script>
+    
   <!--script src="product-category-list/product-category-list.module.js"></script>
   <script src="product-category-list/product-category-list.component.js"></script-->
 
@@ -37,6 +42,8 @@
   <!--script src="core/product-category/product-category.module.js"></script>
   <script src="core/product-category/product-category.service.js"></script-->
   
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+
   <link href="assets/css/roboto/stylesheet.css" rel="stylesheet">
   <link href="assets/css/app.css" rel="stylesheet">
 
@@ -44,13 +51,12 @@
 </head>
 <body>
   <main>
-    <nav>
+    <!--nav>
       <a href="/#!/home">Inicial</a>
       <a href="/#!/products">Produtos</a>
       <a href="/#!/phones">Telefones</a>
-      <!--a href="/#!/orders">Pedidos</a>
-      <a href="/#!/users">Usuários</a-->
-    </nav>
+      <a href="/#!/orders">Pedidos</a>
+    </nav-->
     <div ng-view class="page-viewer">Carregando...</div>
   </main>
 </body>

@@ -1,41 +1,26 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
+<section class="ordersScreen">
 
-      <p>
-        Procure:
-        <input ng-model="$ctrl.query">
-      </p>
-
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="">Select One</option>
-          <option value="title">title</option>
-          <option value="price">Price</option>
-          <option value="id">ID</option>
-        </select>
-      </p>
-
-    </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="orders">
-         <li ng-repeat="order in $ctrl.orders | filter:$ctrl.query | orderBy:$ctrl.orderProp | orderBy:$ctrl.outroCaminho">
-          <h3><a href="#!/order/{{order.id}}">{{order.title}}</a></h3>
-          <a href="#!/order/{{order.id}}" class="thumb">
-          <img ng-src="{{order.imageUrl}}" alt="{{order.title}}" width="200" />
-        </a>
-        <div ng-switch="order.fixedPrice">
-          <h4 ng-switch-when="true">{{ order.price | currency : 'R$' : 2 }}</h4>
-          <h4 ng-switch-default>à partir de {{ order.price | currency : 'R$' : 2 }}</h4>
-        </div>
-          <p>{{order.description}}</p>
-        </li>
-      </ul>
-
-    </div>
+  <div class="waitingOrder">
+    <h3>Pedidos em Espera</h3>
+    <ul>
+      <li>G002</li>
+      <li>F054</li>
+      <li>F051</li>
+      <li>F050</li>
+    </ul>
   </div>
-</div>
+  <div class="closedOrder">
+    <h3>Pedidos encerrados</h3>
+    <ul>
+      <li>G001 <span>Fechado às 13:45</span></li>
+      <li>F053 <span>Fechado às 13:45</span></li>
+      <li>F051 <span>Fechado às 13:45</span></li>
+      <li>F050 <span>Fechado às 13:45</span></li>
+    </ul>
+  </div>
+  <div class="nextOrder">
+    <h3>Próximo Pedido</h3>
+    <span>F057</span>
+    <p>Tempo estimado: 05:50 min</p>
+  </div>
+</section>

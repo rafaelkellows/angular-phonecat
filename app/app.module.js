@@ -6,5 +6,6 @@ angular.module('phonecatApp', [
   'productList',
   'productDetail',
   'phoneList',
-  'phoneDetail'
+  'phoneDetail',
+  'orderList'
 ]);

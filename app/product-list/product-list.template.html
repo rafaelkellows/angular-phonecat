@@ -20,11 +20,51 @@
       </p>
 
     </div>
+
     <div class="col-md-10 list-itens">
       <!--Body content-->
+      <div>
+        <!--div ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+            <h2><p style="color: blue; font-weight: 700;">{{product.title}}</p></h2>
+            <p>{{product.description}}</p>
+            <div ng-if="product.subProductsItens.length > 0">
+              <h3 style="color: rgb(134, 97, 15); font-size: 20px; font-weight: 700;">Sugestões:</h3>
+              <div ng-repeat="subproduct in product.subProductsItens">
+                <h3><a style="font-size: 16px;" href="#!/products/{{subproduct.label}}">{{ subproduct.title }}</a></h3>
+              </div>
+            </div>
+          </div>
+        </div-->
 
-      <ul class="products">
-         <li ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+        <ul class="products">
+          <li ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+            <h3><a href="#!/products/{{product.label}}">{{product.title}}</a></h3>
+            <a href="#!/products/{{product.label}}" class="thumb">
+              <img ng-src="{{product.imageUrl}}" alt="{{product.title}}" width="200" />
+            </a>
+            <div ng-switch="product.fixedPrice">
+              <h4 ng-switch-when="true">{{ product.price | currency : 'R$' : 2 }}</h4>
+              <h4 ng-switch-default>à partir de {{ product.price | currency : 'R$' : 2 }}</h4>
+            </div>
+            <p>Categoria: {{product.label}}</p>
+            <p>{{product.description}}</p>
+
+            <div ng-if="product.subProductsItens.length > 0">
+              <h3>Sugestões:</h3>
+              <div ng-repeat="subproduct in product.subProductsItens">
+                <h5><a style="font-size: 16px;" href="#!/products/{{subproduct.label}}">{{ subproduct.title }}</a></h5>
+                <p>{{ subproduct.description }}</p>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+
+
+
+      <!--ul class="products">
+        <li ng-repeat="product in $ctrl.products | filter:$ctrl.query | orderBy:$ctrl.orderProp">
           <h3><a href="#!/products/{{product.label}}">{{product.title}}</a></h3>
           <a href="#!/products/{{product.label}}" class="thumb">
             <img ng-src="{{product.imageUrl}}" alt="{{product.title}}" width="200" />
@@ -36,8 +76,15 @@
           <p>Categoria: {{product.label}}</p>
           <p>{{product.description}}</p>
           <a href="#!/products/{{product.label}}" class="thumb">Ver produtos</a>
+
+          <h4>Subprodutos</h4>
+          <ul>
+            <li ng-repeat="subproduct in product.subProductsItens">
+              {{ subproduct.title }}
+            </li>
+          </ul>
         </li>
-      </ul>
+      </ul-->
 
     </div>
   </div>
